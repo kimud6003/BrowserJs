@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p>
+    getElementsByTagName
+</p>
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+<ol>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ol>
+<p>
+    getElementsByClassName
+</p>
+<ul>
+    <li>HTML</li>
+    <li class="active">CSS</li>
+    <li class="active">JavaScript</li>
+</ul>
+<p>
+    getElementsById
+</p>
+<ul>
+    <li>HTML</li>
+    <li id="active">CSS</li>
+    <li>JavaScript</li>
+</ul>
+<script>
+    // getElementsByTagName
+    let ul = document.getElementsByTagName('ul')[0];
+    let lis =ul.getElementsByTagName('li');
+    for(var i=0; i < lis.length; i++){
+        lis[i].style.color='red';   
+    }
+    // getElementsByClassName
+    let lis2 =document.getElementsByClassName('active');
+    for(var i=0; i < lis2.length; i++){
+        lis2[i].style.color='red';   
+    }
+    // getElementById
+    let li = document.getElementById('active');
+    li.style.color='red';
+
+    // getElementById
+    var li2 = document.querySelector('li');
+    li2.style.color='green';
+    var li3 = document.querySelector('.active');
+    li3.style.color='blue';
+
+</script>
+</body>
+</html>
+<!-- etElementsByTagName은 인자로 전달된 태그명에 해당하는 객체들을 찾아서 그 리스트를 NodeList라는 유사 배열에 담아서 반환한다.
+     NodeList는 배열은 아니지만 length와 배열접근연산자를 사용해서 엘리먼트를 조회할 수 있다.  -->
