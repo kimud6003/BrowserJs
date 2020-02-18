@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li>JavaScript</li>
+    </ul>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        console.log($('li').length);
+        console.log($('li')[0]);
+        var li = $('li');
+        for(var i=0; i<li.length; i++){
+            console.log(li[i]);
+        }
+    </script>
+</body>
+</html>
+<!-- 만약 li.css('text-decoration',underline)
+          li.css('text-decoration')이라고하면 안에 명령어들이 뭐가 있는지 찾아보는것 -->
