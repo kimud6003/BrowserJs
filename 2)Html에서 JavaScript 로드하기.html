@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Inline 방식의 JS 먹이기</p>
+    <input type="button" onclic="alert('helloWorld')" value="hello World">
+    <!-- onclic 은 Html 문법 / alert(helloworld)는 자바스크립트의 문법
+        이러한 방식을 Inline방식인데 (정보+제어 가 되어있어서 장단점이된다.)
+        검색엔진들이 정보 뿐만 아니라 제어가 있기 때문에 문제가 된다.
+        구 시대적 방법
+    -->
+    <br>
+    <p>modern 하게 자바스크립트 먹이기</p>
+    <input type="button" id="h1" value="Hello world" />
+        <script type="text/javascript">
+          let h1 = document.getElementById('h1');
+          h1.addEventListener('click', function(){
+            alert('Hello world');
+         })
+        </script>
+    <!-- 스크립트 태그를 이용해서 html과 JS를 구분하게 해준다. 
+         이렇게 하면 html 코드 안에 JS 코드가 들어가지 않는다.
+    -->
+
+    <p>외부파일로 먹이기</p>
+    <input type="button" id="h2" value="Hello world" />
+        <script src="./2)script.js"></script>
+        <!-- html문서에서 JS를 완전히 바깥쪽으로 밀어낼수있게 된다.
+            그러게 되면 Html의 문서가 완전히 정보만을 가지고 있게되어 가치가 높아지게 된다.
+            캐쉬를 통해서 속도의 향상,전송량의 경량화를 노릴수있다.
+            즉 중복을 제거한것이다.
+        -->
+</body>
+</html>
