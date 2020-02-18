@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="alert" onclick="alert_func()">
+    <input type="button" value="confirm" onclick="confirm_func()">
+    <input type="button" value="prompt" onclick="prompt_func()">
+
+    <script>
+        function alert_func(){
+            alert(1);
+            alert(2);
+            alert(3);
+        }
+        function confirm_func(){
+            if(confirm('ok?')){
+                alert('ok');
+            }
+            else{
+                alert('cancle');
+            }
+        }
+        function prompt_func(){
+            if(prompt('KUD')==='KUD'){
+                alert('Welcome');
+            }else{
+                alert('get out here');
+            }
+        }
+        /* alert('hello world');
+        window.alert('hello world');
+        let a= 1;
+        alert(a);
+        alert(window.a);
+        let b = {id :1};
+        alert(b.id);
+        alert(window.b.id);*/
+    </script>
+
+
+</body>
+</html>
+
+<!-- Window 객체는 모든 객체가 소속된 객체이고, 전역객체이면서, 창이나 프레임을 의미한다 
+     ECMAScript의 Global 객체라고도 부르는데 Global 객체는 호스트 환경에 따라서 이름이 다르고 하는 역할이 조금씩 다르다.
+     alert, confrim, prompt 
+
+-->
