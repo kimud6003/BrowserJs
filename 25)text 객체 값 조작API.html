@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #target{
+            font-size:77px;
+            font-family: georgia;
+            border-bottom:1px solid black;
+            padding-bottom:10px;
+        }
+        p{
+            margin:5px;
+        }
+        </style>
+</head>
+<body>
+    <p id="target">Cording everybody!</p>
+    <p> data : <input type="text" id="datasource" value="JavaScript" /></p>
+    <p> start :<input type="text" id="start" value="5" /></p>
+    <p> end : <input type="text" id="end" value="5" /></p>
+    <p><input type="button" value="appendData(data)" onclick="callAppendData()" />
+    <input type="button" value="deleteData(start,end)" onclick="callDeleteData()" />
+    <input type="button" value="insertData(start,data)" onclick="callInsertData()" />
+    <input type="button" value="replaceData(start,end,data)" onclick="callReplaceData()" />
+    <input type="button" value="substringData(start,end)" onclick="callSubstringData()" /></p>
+    <script>
+        let t = document.getElementById('target').firstChild;
+        let Data = document.getElementById('datasource');
+        let Start = document.getElementById('start');
+        let End = document.getElementById('end');
+
+        function callAppendData(){
+            t.appendData(Data.value);
+        }
+        function callDeleteData(){
+            t.deleteData(Start.value,End.value);
+        }
+        function callInsertData(){
+            t.insetData(Start.value,Data.value);
+        }
+        function callReplaceData(){
+            t.replaceData(Start.value,End.value,Data.value);
+        }
+        function callSubstringData(){
+            alert(t.substringData(Start.value,End.value));
+        }
+    </script>
+</body>
+</html>

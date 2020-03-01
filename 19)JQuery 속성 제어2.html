@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="t1" href="./demo.html">opentutorials</a>
+    <input id="t2" type="checkbox" checked="checked" />
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        let T1 = $('#t1');
+        console.log(T1.attr('href'));
+        console.log(T1.prop('href'));
+
+        let T2 = $('#t2');
+        console.log(T1.attr('checked'));
+        console.log(T1.prop('checked'));
+    </script>
+</body>
+</html>
