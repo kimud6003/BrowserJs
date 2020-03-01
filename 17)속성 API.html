@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="target" href="https://namu.wiki/">namuwiki</a>
+    <script>
+        let T = document.getElementById('target');
+       console.log( T.getAttribute('href') );
+       T.setAttribute('href',"https://www.naver.com/");
+       console.log(T.hasAttribute('href'));
+       console.log(T.removeAttribute('href'));
+    </script>
+</body>
+</html>
+<!--  
+Element.getAttribute(name)  속성값 가지고 오기
+Element.setAttribute(name, value) 속성값  바꾸기
+Element.hasAttribute(name); 속성값 여부 확인
+Element.removeAttribute(name); 속성값 제거
+-->

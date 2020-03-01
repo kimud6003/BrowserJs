@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li id="active" class="important current">JavaScript</li>
+    </ul>
+    <script>
+        let tmp = document.getElementById('active');
+        console.log(tmp.classList);
+        tmp.classList.add('naruto');
+        for(let i =0; i<tmp.classList.length;i++){
+            tmp.classList.toggle('ramen');
+            console.log(tmp.classList[i]);
+        }
+    </script>
+</body>
+</html>
