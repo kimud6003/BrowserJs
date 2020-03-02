@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>event propagation</legend>
+        <input type="button" id="target" value="target">          
+    </fieldset>
+    <script>
+        function handler(event){
+            var phases = ['capturing', 'target', 'bubbling']
+            console.log(event.target.nodeName, this.nodeName, phases[event.eventPhase-1]);
+        }
+        function Stophandler(evet){
+            var phases = ['capturing', 'target', 'bubbling']
+            console.log(event.target.nodeName, this.nodeName, phases[event.eventPhase-1]);
+            event.stopPropagation();
+        }
+        document.getElementById('target').addEventListener('click', handler, false);
+        document.querySelector('fieldset').addEventListener('click', handler, false);
+        document.querySelector('body').addEventListener('click', Stophandler, false);
+        document.querySelector('html').addEventListener('click', handler, false);
+    </script> 
+</body>
+</html>
+<!-- event.target.nodeName= 클릭 target  
+    this.nodeName은 소속되어있는 태그
+    capturing의 방식 밖에서 안으로
+    bubling은 안에서 밖으로 
+    IE가 낮은 버전에서는 capturing이 잘먹지 않는다
+-->

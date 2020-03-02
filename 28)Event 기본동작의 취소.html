@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <h1>prevent event on <input id="prevent" type="checkbox" name="eventprevent" value="on"/ ></h1>
+    </p>
+    <p>
+     <!--    <a href ="https://www.naver.com/" onclick="if(document.getElementById('prevent').checked) return false;" > naver</a> -->
+        <a href="https://www.naver.com/"> naver2</a>
+    </p>
+    <p>
+        <form action ="https://www.naver.com/" onsubmit="if(document.getElementById('prevent').checked) return false;">
+            <input type="submit" value="inline">
+        </form>
+        <form action="https://www.naver.com/">
+            <input type="submit" value="others">
+        </form>
+    </p>
+    <script>
+       document.querySelector('a').addEventListener('click', function(event){
+                if(document.getElementById('prevent').checked)
+                    event.preventDefault();}
+       ) 
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="target" action="https://www.naver.com/">
+        <label for="name">name</label> <input id="name_input" type="name">
+        <input type="submit">
+    </form>
+        <p id="result"></p>
+        <input id ="input_text" tpye="text">
+    <script>
+        let T= document.getElementById('target');
+        T.addEventListener('submit',function(event){
+            if (document.querySelector('#name_input').value.length===0){
+              alert("비어있다");
+              event.preventDefault();
+            }
+        });
+        let Te = document.getElementById('input_text');
+        Te.addEventListener('change',function(event){
+            document.getElementById('result').innerHTML=event.target.value;
+        });
+        Te.addEventListener('focus',function(event){
+            alert("focus");
+             event.preventDefault();
+        });
+        Te.addEventListener('blur',function(event){
+            alert("blur");
+             event.preventDefault();
+        });
+    </script>
+
+</body>
+</html>
